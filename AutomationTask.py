@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 
+user_pass = input("Please enter the password")
 
 s = Service("C:/DevLop/chromedriver_win32/chromedriver.exe")
 driver = webdriver.Chrome(service=s)
@@ -20,7 +21,7 @@ Find_Login = driver.find_element(by=By.XPATH, value='(//input[@class="form-contr
 Find_Login.send_keys("soham.c@xunison.com") #Login
 
 Find_Pass = driver.find_element(by=By.XPATH, value='//input[@type="password"]')
-Find_Pass.send_keys("soham123") #Password
+Find_Pass.send_keys(user_pass) #Password
 
 #Enter
 driver.find_element(by=By.XPATH, value='/html/body/app-root/mat-sidenav-container/mat-sidenav-content/app-login-page/div/div/div[2]/div/div/div/form/button[1]').send_keys(Keys.ENTER)
