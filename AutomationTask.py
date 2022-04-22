@@ -44,4 +44,5 @@ driver.find_element(by=By.XPATH, value='/html/body/app-root/mat-sidenav-containe
 
 driver.find_element(by=By.XPATH, value='//button[@class="text-white bg-green x-button br-0 mat-flat-button mat-button-base"]').click()
 
+#Close the browser
 driver.close()
